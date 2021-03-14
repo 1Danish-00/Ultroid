@@ -12,5 +12,5 @@ RUN wget -O chromedriver.zip http://chromedriver.storage.googleapis.com/$(curl -
     rm chromedriver.zip
 RUN git clone -b beta https://github.com/TeamUltroid/Ultroid.git /root/TeamUltroid/
 WORKDIR /root/TeamUltroid/
-RUN pip install -r requirements.txt
+RUN pip install py-Ultroid==13.2b0
 CMD ["bash", "resources/startup/startup.sh"]
