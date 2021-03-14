@@ -10,7 +10,7 @@ RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.d
 RUN wget -O chromedriver.zip http://chromedriver.storage.googleapis.com/$(curl -sS chromedriver.storage.googleapis.com/LATEST_RELEASE)/chromedriver_linux64.zip  && \
     unzip chromedriver.zip chromedriver -d /usr/bin/ && \
     rm chromedriver.zip
-RUN git clone https://github.com/TeamUltroid/Ultroid.git /root/TeamUltroid/
+RUN git clone -b beta https://github.com/TeamUltroid/Ultroid.git /root/TeamUltroid/
 WORKDIR /root/TeamUltroid/
 RUN pip install -r requirements.txt
 CMD ["bash", "resources/startup/startup.sh"]
