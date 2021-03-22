@@ -1,5 +1,7 @@
 build: 
   docker:
       web: Dockerfile
+          worker: Dockerfile
 run:
   web: bash resources/startup/startup.sh
+      worker: bash resources/startup/startup.sh
