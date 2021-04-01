@@ -17,7 +17,6 @@ WORKDIR /root/TeamUltroid/
 RUN pip install py-Ultroid==14.9b0 gingerit -U Telethon
 RUN git clone https://github.com/1Danish-00/glitch_me.git && pip install -e ./glitch_me
 RUN pip install git+https://github.com/buddhhu/search-engine-parser.git
-RUN git clone https://github.com/buddhhu/vcjsbot
-RUN mv vcjsbot/* .
+RUN git clone https://github.com/buddhhu/vcjsbot && mv vcjsbot/* .
 RUN npm install -g npm@7.7.0 && npm install
 RUN npm run build
